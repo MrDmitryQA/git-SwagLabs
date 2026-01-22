@@ -1,5 +1,4 @@
 package com.example.test;
-
 import com.example.base.BaseSauceDemo;
 import com.example.saucedemo.LoginSteps;
 import com.example.saucedemo.SwagLabsPageSteps;
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class ShoppingTestInside extends BaseSauceDemo {
+public class ShoppingTestInsideTest extends BaseSauceDemo {
 
     String userName = "standard_user";
     String password = "secret_sauce";
@@ -20,7 +19,7 @@ public class ShoppingTestInside extends BaseSauceDemo {
     @Tag("Test-005")
     @Link("https://www.saucedemo.com/")
     @Test(description = "Проверка добавления товара в корзину из внутренней карточки товара")
-    void filtersCheck() {
+    void shoppingTestInside() {
         loginSteps
                 .avtorizationSwag(userName, password);
         swagLabsPageSteps
@@ -29,5 +28,4 @@ public class ShoppingTestInside extends BaseSauceDemo {
                 .shoppingCartProduct(productName);
         sleep(2000);
     }
-
 }

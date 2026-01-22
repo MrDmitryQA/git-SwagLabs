@@ -1,5 +1,4 @@
 package com.example.test;
-
 import com.example.base.BaseSauceDemo;
 import com.example.saucedemo.LoginSteps;
 import com.example.saucedemo.SwagLabsPageSteps;
@@ -11,25 +10,26 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
-@Feature("Swag Labs") // Бизнес сервис
-@Owner("Барченко Д.О.") // Владелец
+@Feature("Swag Labs")
+@Owner("Барченко Д.О.")
 
-public class AuthorizationTestNegative extends BaseSauceDemo  {
+public class AuthorizationNegativeTest extends BaseSauceDemo  {
 
     String userName = "Java_is_AWESOME";
     String password = "Selenide_is_COOL";
     LoginSteps loginSteps = new LoginSteps();
-    SwagLabsPageSteps swagLabsPageElements = new SwagLabsPageSteps();
+    SwagLabsPageSteps swagLabsPageSteps = new SwagLabsPageSteps();
 
-    @Tag("Test-002")
+    @Tag("Test-001")
     @Link("https://www.saucedemo.com/")
-    @Test(description = "Проверка процедуры Авторизации")
+    @Test(description = "Проверка ошибки авторизации")
     void testAuthNot() {
         loginSteps
-                .avtorizationSwag(userName, password);
-        swagLabsPageElements
-                .checkLogoSwagLabs();
-        sleep(3000);
+                .avtorizationSwag(userName, password)
+                .errorTextMessageElement();
+        swagLabsPageSteps
+                .clickOk();
+        sleep(2000);
     }
 }
 

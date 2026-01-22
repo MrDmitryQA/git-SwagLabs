@@ -3,10 +3,9 @@ package com.example.base;
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.annotations.*;
-
 import static com.codeborne.selenide.Selenide.*;
 
-public class BaseSacuceDemo {
+public class BaseSauceDemo {
 
     @BeforeSuite
     public void setUpSuite() {
