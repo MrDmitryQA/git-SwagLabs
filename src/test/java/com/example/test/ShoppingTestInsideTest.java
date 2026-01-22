@@ -22,7 +22,7 @@ public class ShoppingTestInsideTest extends BaseSauceDemo {
         loginSteps
                 .avtorizationSwag(userName, password);
         swagLabsPageSteps
-                //.clickOk()
+                .clickOk()
                 .shoppingCartPlus(productName);
         sleep(2000);
     }
