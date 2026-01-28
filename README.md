@@ -14,16 +14,18 @@ Git (для клонирования репозитория)
 * Скачать с git-scm.com
 
 ### Установка и запуск
-* Клонируйте репозиторий:
-
-bash
+* Клонируйте репозиторий (bash):
+```
 git clone https://github.com/MrDmitryQA/git-SwagLabs.git
-
+```
+```
 cd git-SwagLabs
+```
 
-* Соберите проект:
-bash
+* Соберите проект (bash):
+```
 mvn clean compile
+```
 
 * Запуск тестов Из IDE IntelliJ IDEA:
 
